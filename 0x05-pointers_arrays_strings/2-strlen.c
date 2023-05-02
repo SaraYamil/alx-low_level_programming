@@ -2,7 +2,7 @@
 /**
  * _strlen - katraj3 the tol dyal  string
  * @s: string
- * Return: length
+ * Return: tolta3kelma
  */
 int _strlen(char *s)
 {
