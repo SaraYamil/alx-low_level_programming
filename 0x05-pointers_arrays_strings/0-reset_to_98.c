@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- *  reset_to_98 - takes the pointer and updates the value
+ *  reset_to_98 - takes the pointer and the value
  *  @n: int to check
- *  Owned By Bwave/Bright
- *  Return: 0 is success
+ *  Owned By sun/moon
+ *  Return: 0 rah khdemat
  */
 
 void	reset_to_98(int *n)
