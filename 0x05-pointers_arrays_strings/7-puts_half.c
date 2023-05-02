@@ -1,24 +1,25 @@
 #include "main.h"
 /**
-
-puts_half - prints half of a string
-
-@str: char to check
-
-Return: 0 is success
-*/
+ * puts_half - fonctin kt3tina ness kelma 
+ * knhssbo chahel fiha kn9semo hram 3a joj
+ * @str: hhhhhh
+ * Return: wach chgolkom
+ */
 void puts_half(char *str)
 {
-	int string = 0, n, i;
+	int a, n, longi;
 
-	while (str[string] != '\0')
-		string++;
-	if (string % 2 == 0)
-		n = string / 2;
-	else
-	n = (string + 1) / 2;
+	longi = 0;
 
-	for (i = n; i < string; i++)
-	_putchar(str[i]);
-	_putchar('\n');
+	for (a = 0; str[a] != '\0'; a++)
+		longi++;
+
+	n = (longi / 2);
+
+	if ((longi % 2) == 1)
+		n = ((longi + 1) / 2);
+
+	for (a = n; str[a] != '\0'; a++)
+		_putchar(str[a]);
+		_putchar('\n');
 }
