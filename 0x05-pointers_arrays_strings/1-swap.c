@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * swap_int - swaps the value of int a and int b
- * Owned by Bwave/Bright
- * @a: first int
- * @b: second int
+ * swap_int - nbdlo had value dyal int a bi int b
+ * Owned by sun/moon
+ * @a: awal int
+ * @b: tani int
  * Return 0
  */
 
