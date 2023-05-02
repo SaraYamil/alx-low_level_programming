@@ -1,11 +1,11 @@
-ii#include "main.h"
+#include "main.h"
 
 /**
- * swap_int - tanbdlo l  value dyal int a b int b
- * Owned by sun/moon
- * @a: awal int
- * @b: tani int
- * Return 0 rah t9ad
+ * swap_int - swaps the value of int a and int b
+ * Owned by Bwave/Bright
+ * @a: first int
+ * @b: second int
+ * Return 0
  */
 
 void swap_int(int *a, int *b)
