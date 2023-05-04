@@ -5,7 +5,7 @@
  * print_buffer - ma3ert
  * @b: bffer
  * @size: tail
- * Return: dima kangol lik maso9akch
+ * Return: maso9akch
  */
 
 void print_buffer(char *b, int size)
