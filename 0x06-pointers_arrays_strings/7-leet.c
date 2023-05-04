@@ -6,9 +6,10 @@
  *
  * Return: mchgolkmch a mkhademch lya code lwal glna njarbo b had code
  */
+
 char *leet(char *n)
 {
-	int i, j;
+int i, j;
 	char s1[] = "aAeEoOtTlL";
 	char s2[] = "4433007711";
 
