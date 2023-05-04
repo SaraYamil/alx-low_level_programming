@@ -1,19 +1,21 @@
 #include "main.h"
-
 /**
-*string_toupper - change all lowercase to uppercase
-*@n: pointer
-*Return: n
-*/
-char *string_toupper(char *n)
+ * string_toupper - sghir b kbir
+ * @s:stringy
+ * Return: mchgolkch
+ */
+char *string_toupper(char *s)
 {
-int i = 0;
 
-while (*n)
+	int i;
+
+i = 0;
+	while (*(s + i))
 	{
-	if (*n >= 'a' && *n <= 'z')
-	*n = *n - 32;
-	n++;
+		if (*(s + i) >= 'a' && *(s + i) <= 'z')
+			*(s + i) -= 'a' - 'A';
+		i++;
 	}
-return (n - i);
+	return (s);
 }
+/*Bwave ICT */
