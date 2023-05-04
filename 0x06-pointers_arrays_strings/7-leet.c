@@ -4,22 +4,23 @@
  * leet - ma3erftch
  * @s: stringy
  *
- * Return: mchgolkmch a mkhademch lya code lwal glna njarbo b had code 
+ * Return: mchgolkmch a mkhademch lya code lwal glna njarbo b had code
  */
-char *leet(char *s)
+char *leet(char *n)
 {
 	int i, j;
-	char a[] = "aAeEoOtTlL";
-	char b[] = "4433007711";
+	char s1[] = "aAeEoOtTlL";
+	char s2[] = "4433007711";
 
-	for (i = 0; *(s + i); i++)
+	for (i = 0; n[i] != '\0'; i++)
 	{
-		for (j = 0; j <= 9; j++)
+		for (j = 0; j < 10; j++)
 		{
-			if (a[j] == s[i])
-				s[i] = b[j];
+			if (n[i] == s1[j])
+			{
+				n[i] = s2[j];
+			}
 		}
 	}
-	return (s);
+	return (n);
 }
-/* Doing hard things is a must */
