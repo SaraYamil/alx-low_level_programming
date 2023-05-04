@@ -1,14 +1,12 @@
-#include <stdio.h>
-
 int main(void)
 {
-  int sara;
-  int haz9a[5];
-  int *kharya;
+  int n;
+  int a[5];
+  int *p;
 
-  haz9a[2] = 1024;
-  kharya = &sara;
-  /*
+  a[2] = 1024;
+  p = &n;
+   /*
    * nkatbo chi haja hna
    * Remember:
    * - inaa homa sakin ntoma
@@ -16,8 +14,8 @@ int main(void)
    * - wrini bab
    * - darkom njikom
    */
-  *(kharya + 5) = 98;
+  *(p + 5) = 98;
   /* ...so that this prints 98\n */
-  printf("haz9a[2] = %d\n", haz9a[2]);
+  printf("a[2] = %d\n", a[2]);
   return (0);
 }
