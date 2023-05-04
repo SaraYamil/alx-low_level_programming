@@ -1,40 +1,25 @@
 #include "main.h"
-/**
-*leet - kandlo harf b ra9m bhalo
-*@n: variable
-*Return: maso9akch
-*/
-char *leet(char *n)
-{
-int i;
 
-for (i = 0; n[i] != '\0'; i++)
+/**
+ * leet - ma3erftch
+ * @s: stringy
+ *
+ * Return: mchgolkmch a mkhademch lya code lwal glna njarbo b had code 
+ */
+char *leet(char *s)
+{
+	int i, j;
+	char a[] = "aAeEoOtTlL";
+	char b[] = "4433007711";
+
+	for (i = 0; *(s + i); i++)
 	{
-	switch (n[i])
-	{
-	case 'a':
-	case 'A':
-	n[i] = '4';
-	break;
-	case 'e':
-	case 'E':
-	n[i] = '3';
-	break;
-	case 'o':
-	case 'O':
-	n[i] = '0';
-	break;
-	case 't':
-	case 'T':
-	n[i] = '7';
-	break;
-	case 'l':
-	case 'L':
-	n[i] = '1';
-	break;
-	default:
-	break;
+		for (j = 0; j <= 9; j++)
+		{
+			if (a[j] == s[i])
+				s[i] = b[j];
+		}
 	}
-	}
-return (n);
+	return (s);
 }
+/* Doing hard things is a must */
