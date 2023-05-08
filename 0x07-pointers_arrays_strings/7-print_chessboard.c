@@ -2,9 +2,9 @@
 /**
  * print_chessboard - fonction w safe
  * @a: tableux
- * 
  * Return:wa maso9akch
  */
+
 void print_chessboard(char (*a)[8])
 {
   int sara;
