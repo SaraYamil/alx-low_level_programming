@@ -8,11 +8,13 @@ i#include "main.h"
 */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-unsigned int i;
+    char *temp_dest = dest; // create a temporary pointer and set it to dest
+    char *temp_src = src;   // create a temporary pointer and set it to src
 
-for (i = 0; i < n; i++)
-{
-  *(dest + i) = *(src + i);
-}
-return (dest);
+    while (n--)
+    {
+        *temp_dest++ = *temp_src++; // copy the value of temp_src to temp_dest and increment both pointers
+    }
+
+    return dest;
 }
