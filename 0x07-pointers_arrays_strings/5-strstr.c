@@ -1,38 +1,34 @@
 #include "main.h"
+
 /**
- * _strstr - Entry point
- * @haystack: input
- * @needle: input
- * Return: Always 0 (Success)
- */
+* _strstr - fonction w safe
+* @haystack: tol ta3 string hachakom
+* @needle: vriable pointer
+* Return: wa maso9akch
+*/
 
 char *_strstr(char *haystack, char *needle)
 {
-if (!haystack || !needle)          // Check for null pointers
-  return NULL;
-if (*needle == '\0')               // Check for empty needle string
-    return haystack;
+  unsigned int i = 0, j = 0;
 
-if (*haystack == '\0')             // Check for end of haystack string
-    return NULL;
-
-if (*haystack == *needle)
-{
-    char *h = haystack;
-    char *n = needle;
-
-    while (*h != '\0' && *n != '\0')
+  while (haystack[i])
+  {
+    while (needle[j] && (haystack[i] == needle[0]))
     {
-        if (*h != *n)
-            return _strstr(haystack + 1, needle);  // Recursive call
-
-        h++;
-        n++;
+      if (haystack[i + j] == needle[j])
+        j++;
+      else
+        break;
     }
-
-    if (*n == '\0')
-        return haystack;
-}
-
-return _strstr(haystack + 1, needle);  // Recursive call
+    if (needle[j])
+    {
+      i++;
+      j = 0;
+    }
+    else
+    {
+      return (haystack + i);
+    }
+  }
+  return (0);
 }
