@@ -8,12 +8,12 @@ i#include "main.h"
 */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-    char *temp_dest = dest; // create a temporary pointer and set it to dest
-    char *temp_src = src;   // create a temporary pointer and set it to src
+    char *temp_dest = dest;
+    char *temp_src = src;   
 
     while (n--)
     {
-        *temp_dest++ = *temp_src++; // copy the value of temp_src to temp_dest and increment both pointers
+        *temp_dest++ = *temp_src++;
     }
 
     return dest;
