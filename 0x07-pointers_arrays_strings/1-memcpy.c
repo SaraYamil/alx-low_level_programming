@@ -1,11 +1,14 @@
 #include "main.h"
 /**
-*_memcpy - c katcopy misaha
-*@dest: vriable lwal 
-*@src: mimor li ancopyh
-*@n: 3dad abyat
-*Return: maso9kch
+ * _memcpy - fonction fchkel
+ *
+ * @dest: ach ghadi ncopiw
+ * @src: a la hadi hya ancopiw ama lwala rah fin ancopiw
+ * @n: 3dad bytes
+ *
+ * Return: maso9akch
 */
+
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
   unsigned int i;
