@@ -1,4 +1,4 @@
-i#include "main.h"
+#include "main.h"
 /**
 *_memcpy - c katcopy misaha
 *@dest: vriable lwal 
