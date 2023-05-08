@@ -1,19 +1,21 @@
 #include "main.h"
+
 /**
- * print_chessboard - fonction w safe
- * @a: tableux
- * Return:wa maso9akch
+ * print_chessboard - prints the chessboard
+ * @a: pointer to pieces to print
+ * Return: void
  */
 
 void print_chessboard(char (*a)[8])
 {
-  int sara;
-  int ikram;
+	int i, L;
 
-  for (sara = 0; sara < 8; sara++)
-  {
-    for (ikram = 0; ikram < 8; ikram++)
-      _putchar(a[sara][ikram]);
-    _putchar('\n');
-  }
+	for (i = 0; i < 8; i++)
+	{
+		for (L = 0; L < 8; L++)
+		{
+			_putchar(a[i][L]);
+		}
+		_putchar('\n');
+	}
 }
