@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * print_chessboard - prints the chessboard
- * @a: pointer to pieces to print
- * Return: void
+ * print_chessboard - fonction machoglnach
+ * @a: pointer a sidi
+ * Return: maso9akh
  */
 
 void print_chessboard(char (*a)[8])
