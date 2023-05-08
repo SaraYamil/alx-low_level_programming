@@ -1,34 +1,27 @@
 #include "main.h"
-
 /**
-* _strstr - fonction w safe
-* @haystack: tol ta3 string hachakom
-* @needle: vriable pointer
-* Return: wa maso9akch
-*/
-
+ * _strstr - foncstion
+ * @haystack: hta ana 
+ * @needle: variabl
+ * Return: maso9akch
+ */
 char *_strstr(char *haystack, char *needle)
 {
-  unsigned int i = 0, j = 0;
+	for (; *haystack != '\0'; haystack++)
+	{
+		char *l = haystack;
+		char *p = needle;
 
-  while (haystack[i])
-  {
-    while (needle[j] && (haystack[i] == needle[0]))
-    {
-      if (haystack[i + j] == needle[j])
-        j++;
-      else
-        break;
-    }
-    if (needle[j])
-    {
-      i++;
-      j = 0;
-    }
-    else
-    {
-      return (haystack + i);
-    }
-  }
-  return (0);
+		while (*l == *p && *p != '\0')
+		{
+			l++;
+			p++;
+		}
+
+		if (*p == '\0')
+			return (haystack);
+	}
+
+	return (0);
 }
+
