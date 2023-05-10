@@ -1,19 +1,16 @@
 #include "main.h"
+
 /**
- * _strlen_recursion - fonction tol ta3 string
- * @s: string pointer
- *Return - machgolakch
+ * factorial - fonction 3adadya
+ * @n: variable
+ *
+ * Return: maso9akch
  */
-
-int _strlen_recursion(char *s)
+int factorial(int n)
 {
-	int longit = 0;
-
-	if (*s)
-	{
-		longit++;
-		longit += _strlen_recursion(s + 1);
-	}
-
-	return (longit);
+	if (n < 0)
+		return (-1);
+	if (n == 0)
+		return (1);
+	return (n * factorial(n - 1));
 }
