@@ -2,9 +2,9 @@
 /**
  * _strlen_recursion - tol ta3 string
  * @s: string pointer
- *
- * 
+ *Return - machgolakch
  */
+
 int _strlen_recursion(char *s)
 {
 	int longit = 0;
