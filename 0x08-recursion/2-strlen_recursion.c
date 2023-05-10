@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _strlen_recursion - tol ta3 string
+ * _strlen_recursion - fonction tol ta3 string
  * @s: string pointer
  *Return - machgolakch
  */
