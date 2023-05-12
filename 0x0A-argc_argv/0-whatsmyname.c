@@ -2,15 +2,15 @@
 #include "main.h"
 
 /**
- * main - print smya ta3 program
- * @argc: 3adad arg
- * @argv: tableyx argments
+ * main - smya ta3 program
+ * @argc: number of arguments
+ * @argv: array of arguments
  *
- * Return: -
+ * Return: mso9komch ndir li bghit
  */
 int main(int argc __attribute__((unused)), char *argv[])
 {
-    printf("%s\n", *argv);
+	printf("%s\n", *argv);
 
-    return (0);
+	return (0);
 }
