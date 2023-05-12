@@ -1,14 +1,17 @@
 #include "main.h"
+
 /**
- * _isupper - uppercase horof
- * @c: char w safe
+ * _isupper - uppercase letters
+ * @c: character to check
  *
- * Return: maso9kech
+ * Return: maso9akch
  */
 int _isupper(int c)
+
 {
 	if (c >= 'A' && c <= 'Z')
 		return (1);
 	else
-	return (0);
+		return (0);
+
 }

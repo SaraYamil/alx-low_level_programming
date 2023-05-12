@@ -1,16 +1,12 @@
 #include "main.h"
-
-
 /**
- * _abs - compte abslout valeur int hhhhhh
- * @n: variable int
- * Return: maso9akch wlah
- */
-int _abs(int n)
+* _abs - a fucntion that computes the absolute value of an integer
+*
+* @ab: integer input
+*
+* Return: absolute value of ab
+*/
+int _abs(int ab)
 {
-	if (n >= 0)
-	{
-		return (n);
-	}
-	return (-n);
+return (ab * ((ab > 0) - (ab < 0)));
 }

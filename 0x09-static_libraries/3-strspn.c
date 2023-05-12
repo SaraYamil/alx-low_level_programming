@@ -1,29 +1,32 @@
 #include "main.h"
 
 /**
- * _strspn - ficher  memory with a constant byte.
- * @s: input byte memory
- * @accept: input byte b
- * Return: maso9akomch awili chgolkom
+ * _strspn - a function that gets the length of a prefix substring
+ *
+ * @s: the initial segment of
+ *
+ * @accept: which consist only of bytes from
+ *
+ * Return: the number of bytes
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, j;
-	int notfound = 0;
+	int z = 0, x, y;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (x = 0; s[x] != '\0'; x++)
 	{
-		if (accept[i] == '\0')
-			break;
-		for (j = 0; accept[j] != '\0'; j++)
+		if (s[x] != 32)
 		{
-			if (s[i] == accept[j])
-				break;
-			if (accept[j + 1] == '\0')
-				notfound = 1;
+			for (y = 0; accept[y] != '\0'; y++)
+			{
+				if (s[x] == accept[y])
+					z++;
+			}
 		}
-		if (notfound)
-			break;
+		else
+			return (z);
 	}
-	return (i);
+		return (z);
+
 }

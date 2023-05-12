@@ -1,27 +1,26 @@
 #include "main.h"
 
 /**
- * _strcat - fonction concatenates two strings
- * @src: input string
- * @dest: input string
- * Return: machoglakch
+ * _strcat - joj ta3  string
+ * @dest:input
+ * @src:input
+ * Return:s
  */
 char *_strcat(char *dest, char *src)
 {
-	int i;
-	int j;
+	char *s = dest;
 
-	for (i = 0; dest[i] != '\0'; i++)
+	while (*dest != '\0')
 	{
-		if (dest[i + 1] == '\0')
-		{
-			for (j = 0; src[j] != '\0'; j++)
-			{
-				dest[i + 1] = src[j];
-				i++;
-			}
-		}
+		dest++;
 	}
 
-	return (dest);
+	while (*src != '\0')
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+	*dest = '\0';
+	return (s);
 }
