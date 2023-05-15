@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- * str_concat - hhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhh hhhhhhhhhhhh 
+ * str_concat - hhhhhhhhhhhh hhhhhhhhhhhhh hhhhhhhhhhh hhhhhh
  * @s1: input vriable char
  * @s2: input vriable char
  * Return: maso9kech fhdchii
