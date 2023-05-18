@@ -1,50 +1,45 @@
+#include <stdlib.h>
 #include "main.h"
+
 /**
- * string_nconcat - fonction kanaktbo fiha arry ta3 cahr HHHHHHHHHH
- *  and initializes it with a specific char
- * hadchi li kan hana a  betty tal3at lya bli telling commant
- * @s1: inpute bite f  had  memorie
- * @s2: inpute bite f  had  memorie
- * @n: inpute bite f  had  memorie
- * Return: maso9akch a sidi ndir li bghit
+ * string_nconcat - fonction w safe ki concari bin stringat HHHHHHHH
+ * @s1: striiiiiiiiiiiiiiin gggggg
+ * @s2: ssssssssss aaa rrrrrrr aaaaaa
+ * @n: cccccccccccccc oooooooooo dddddddddd e
+ *
+ * Return: maso9kach wlah hhhhhhhhh
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int z;
-	char *cp;
-	unsigned int size1 = 0;
-	unsigned int size2 = 0;
+	char *s;
+	unsigned int i = 0, j = 0, len1 = 0, len2 = 0;
 
-	if (s2 == NULL)
-		s2 = "";
-	if (s1 == NULL)
-		s1 = "";
-	while (s1[size1])
-	{
-		size1++;
-	}
-	while (s2[size2])
-	{
-		size2++;
-	}
-	if (size2 > n)
-		size2 = n;
-	copy = malloc(size1 + size2 + 1);
-	if (!cp)
-	{
+	while (s1 && s1[len1])
+		len1++;
+	while (s2 && s2[len2])
+		len2++;
+
+	if (n < len2)
+		s = malloc(sizeof(char) * (len1 + n + 1));
+	else
+		s = malloc(sizeof(char) * (len1 + len2 + 1));
+
+	if (!s)
 		return (NULL);
-	}
-	for (z = 0; i < size1 + size2; z++)
+
+	while (i < len1)
 	{
-		if (z < size1)
-		{
-			cp[z] = s1[z];
-		}
-		else
-		{
-			cp[z] = s2[z - size1];
-		}
+		s[i] = s1[i];
+		i++;
 	}
-	cp[z] = '\0';
-	return (cp);
+
+	while (n < len2 && i < (len1 + n))
+		s[i++] = s2[j++];
+
+	while (n >= len2 && i < (len1 + len2))
+		s[i++] = s2[j++];
+
+	s[i] = '\0';
+
+	return (s);
 }
