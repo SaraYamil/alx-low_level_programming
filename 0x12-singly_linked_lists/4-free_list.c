@@ -15,6 +15,6 @@ void free_list(list_t *head)
 		free(nv->str);
 		nv2 = nv->next;
 		free(nv);
-		av = nv2;
+		nv = nv2;
 	}
 }
