@@ -1,25 +1,25 @@
 #include "lists.h"
 #include <stdio.h>
 /**
- * add_node_end - foonction add node end
- * @head: inpute
- * @str: inpute
- * Return: maso9akch
+ * add_node_end - check the code
+ * @head: a
+ * @str: a
+ * Return: Always 0.
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *n;
-	int cnt = 0;
+	list_t *new;
+	int count = 0;
 	list_t *nav = *head;
 
-	n = malloc(sizeof(list_t));
-	if (n == NULL)
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 		return (NULL);
-	n->str = strdup(str);
-	while (str[cnt])
-		cnt++;
-	n->len = cnt;
-	n->next = NULL;
+	new->str = strdup(str);
+	while (str[count])
+		count++;
+	new->len = count;
+	new->next = NULL;
 
 	if (nav == NULL)
 		*head = new;
@@ -27,7 +27,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	{
 		while (nav->next != NULL)
 			nav = nav->next;
-		nav->next = n;
+		nav->next = new;
 	}
-	return (n);
+	return (new);
 }
