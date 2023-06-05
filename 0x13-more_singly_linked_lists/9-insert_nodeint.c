@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - fonctiona codee
+ * insert_nodeint_at_index - fonction a code
  * @head: inpute
  * @idx: inpute
  * @n: inpute
@@ -9,40 +9,40 @@
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *nv, *nw, *bf;
+	listint_t *nav, *new, *before;
 	unsigned int i = 0;
 
 	if (!head)
 		return (NULL);
-	nv = *head;
-	nw = malloc(sizeof(listint_t));
-	if (!nw)
+	nav = *head;
+	new = malloc(sizeof(listint_t));
+	if (!new)
 		return (NULL);
-	nw->n = n;
-	nw->next = NULL;
+	new->n = n;
+	new->next = NULL;
 	if (idx == 0)
 	{
-		nw->next = *head;
-		*head = nw;
-		return (nw);
+		new->next = *head;
+		*head = new;
+		return (new);
 	}
-	while (nv)
+	while (nav)
 	{
 		if (i == idx - 1)
-			bf = nv;
+			before = nav;
 
 		if (i == idx)
 		{
-			nw->next = nv;
-			bf->next = nw;
-			return (nw);
+			new->next = nav;
+			before->next = new;
+			return (new);
 		}
-		if (!nv->next && i + 1 == idx)
+		if (!nav->next && i + 1 == idx)
 		{
-			nv->next = nw;
-			return (nw);
+			nav->next = new;
+			return (new);
 		}
-		nv = nv->next;
+		nav = nav->next;
 		i++;
 	}
 	return (NULL);
