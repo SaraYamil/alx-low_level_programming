@@ -2,48 +2,47 @@
 
 /**
  * insert_nodeint_at_index - fonction a code
- * @head: inpute
- * @idx: inpute
- * @n: inpute
- * Return: maso9akch
+ * @head: pointer hhhhhhhhhhhhhhhhh
+ * @idx: index hhhhhhhhhhhhhhhhhhhhh
+ * @n: data
+ * Return: maso9kach fya a kimba
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *nav, *new, *before;
-	unsigned int i = 0;
+	unsigned int i;
+	listint_t *new_node;
+	listint_t *current;
 
 	if (!head)
 		return (NULL);
-	nav = *head;
-	new = malloc(sizeof(listint_t));
-	if (!new)
+
+	new_node = malloc(sizeof(listint_t));
+	if (!new_node)
 		return (NULL);
-	new->n = n;
-	new->next = NULL;
+
+	new_node->n = n;
+
 	if (idx == 0)
 	{
-		new->next = *head;
-		*head = new;
-		return (new);
+		new_node->next = *head;
+		*head = new_node;
+		return (new_node);
 	}
-	while (nav)
-	{
-		if (i == idx - 1)
-			before = nav;
 
-		if (i == idx)
-		{
-			new->next = nav;
-			before->next = new;
-			return (new);
-		}
-		if (!nav->next && i + 1 == idx)
-		{
-			nav->next = new;
-			return (new);
-		}
-		nav = nav->next;
-		i++;
+	current = *head;
+
+	for (i = 0; current && i < idx - 1; i++)
+		current = current->next;
+
+	if (!current)
+	{
+		free(new_node);
+		return (NULL);
 	}
-	return (NULL);
+
+	new_node->next = current->next;
+	current->next = new_node;
+
+	return (new_node);
 }
+
