@@ -1,26 +1,31 @@
 #include "main.h"
 
 /**
- * _strcat - wlah ma3erft had blan
- * @dest:variable lawl
- * @src:variable tani
- * Return: maso9kch
+ * *_strcat - function commute srtings
+ * @dest: param pointer to a char
+ * @src: param pointer to a char
+ * Return: return value of dest
  */
+
 char *_strcat(char *dest, char *src)
 {
-	char *s = dest;
+	int i;
+	int j;
 
-	while (*dest != '\0')
+	i = 0;
+	j = 0;
+
+	while (dest[i] != '\0')
 	{
-		dest++;
+		i++;
+	}
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		j++;
+		i++;
 	}
 
-	while (*src != '\0')
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = '\0';
-	return (s);
+	dest[i] = '\0';
+	return (dest);
 }

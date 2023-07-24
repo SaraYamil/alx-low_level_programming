@@ -1,28 +1,28 @@
 #include "main.h"
 
 /**
-* _strspn - had function kathssb lnugh dyal strin
-* @s: bdaya
-* @accept: variable pointer
-* Return: maso9akch
-*/
-
+ * _strspn - gets the length of a prefix substring.
+ * @s: initial segment.
+ * @accept: accepted bytes.
+ * Return: the number of accepted bytes.
+ */
 unsigned int _strspn(char *s, char *accept)
 {
-	int a = 0, b, c;
+	unsigned int i, j, bool;
 
-	for (b = 0; s[b] != '\0'; b++)
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		if (s[b] != 32)
+		bool = 1;
+		for (j = 0; *(accept + j) != '\0'; j++)
 		{
-			for (c = 0; accept[c] != '\0'; c++)
+			if (*(s + i) == *(accept + j))
 			{
-				if (s[b] == accept[c])
-					a++;
+				bool = 0;
+				break;
 			}
 		}
-		else
-			return (a);
+		if (bool == 1)
+			break;
 	}
-	return (a);
+	return (i);
 }
